@@ -118,3 +118,13 @@ Afterwards, add the following in the style block to tell Vue to compile the CSS 
 ```
 
 In this case the newest version of sass-loader (which is 11) doesn't work...downgrade it to 10 to have it working again. 
+
+## Communicating Between Components
+Lean how to pass down data to children components.
+
+Component A (Root) -> Component B
+                   -> Component C
+
+Component A is the root or, __Parent__ component to Component B and Component C. Component B and Component C are known as __Siblings__ component to each other because they sit on the same level in the hierarchy. 
+
+However, there is no way for Sibling components to send data to each other. Therefore, in order to send data, it should be stored in the App (Root) component, and send data down using __props__. 
