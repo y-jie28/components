@@ -77,6 +77,12 @@ The createApp function from the Vue package and an object called __App__.
 
 __createApp__ creates the application. App is a Vue file, which is considered as a component. All components end with .vue extension. 
 
+## Components
+For a component to be valid, it must have the __template__ block. It can have one or multiple root element. 
+
+The __name__ property can be added to a component. It is not required, but is useful when it comes to debugging. 
+If no name is assigned, Vue will give it name "anonymous". 
+
 
 
 
