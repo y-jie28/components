@@ -83,8 +83,25 @@ For a component to be valid, it must have the __template__ block. It can have on
 The __name__ property can be added to a component. It is not required, but is useful when it comes to debugging. 
 If no name is assigned, Vue will give it name "anonymous". 
 
+## Component Styles
+__style__ block is another important block in a Vue component. Just like __template__ and __script__ which you will always see in a Vue component. 
 
+By applying styles to a HTML tag, it will be applied to all tags. There are two ways to solve this problem. One is by using __id__ and __classes__, another is something that Vue provides.
 
+### Shadow DOM
+- A way to isolate components from the regular DOM with its own stylings, events and structure. 
+- Any data defined in a component is isolated to that component, same idea. 
+- Not the Virtual DOM. A Virtual DOM is a JavaScript Object that is a copy of the Real DOM, while Shadow DOM is an isolated DOM from the real DOM. 
+
+An attribute named __scoped__ can be added to the __style__ block, Vue will compile the template making sure the styles are only applicable to the component. 
+
+```
+Scoped CSS
+
+When a <style> tag has the scoped attribute, its CSS will apply to the elements of the current component only. This is similar to the style encapsulation found in Shadow DOM. 
+```
+
+It is similar to Shadow DOM, but Vue does not use the Shadow DOM because not all browsers support Shadow DOM. 
 
 
 

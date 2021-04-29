@@ -1,4 +1,5 @@
 <template>
+  <p>Hello App!</p>
   <Greeting></Greeting>
 </template>
 
