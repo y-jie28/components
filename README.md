@@ -56,6 +56,7 @@ The key is the __Vue CLI Packages in the__ "scripts" section.
 
 Contains config for "ESLint".
 
+Vue CLI uses PostCSS internally. 
 Although PostCSS config is not in the package.json, Vue will configure the PostCSS behind the scenes. 
 
 ## Directories
@@ -103,5 +104,17 @@ When a <style> tag has the scoped attribute, its CSS will apply to the elements 
 
 It is similar to Shadow DOM, but Vue does not use the Shadow DOM because not all browsers support Shadow DOM. 
 
+## Using SASS in Components
+Does not come installed with Vue CLI, can manually add to the project if SASS is preferred. 
 
+```
+npm install node-sass sass-loader --save-dev
+```
 
+Afterwards, add the following in the style block to tell Vue to compile the CSS in SASS: 
+
+```
+<style lang="scss"></style>
+```
+
+In this case the newest version of sass-loader (which is 11) doesn't work...downgrade it to 10 to have it working again. 
