@@ -5,7 +5,9 @@
   written in lower case and Vue is still able to recognize it. This is nice since HTML elements are lower cased -->
   <greeting :age="age"></greeting>
   <!-- The value that gets passed down will not automatically be interpreted as an expression -->
-  <user :age="age" @age-change="updateAge"></user>
+  <!-- <user :age="age" @age-change="updateAge"></user> -->
+  <user :age="age" @age-change="updateAge" :ageChangeFunction="updateAgeCB"></user>
+
 </template>
 
 <script>
@@ -29,6 +31,9 @@ export default {
   methods: {
     updateAge(num) {
       this.age += num 
+    },
+    updateAgeCB(num) {
+      this.age += num
     }
   }
 };

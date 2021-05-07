@@ -2,7 +2,8 @@
     <p>The  user is {{ age }} years old</p>
     <!-- the following will throw an error because prop mutation is not allowed -->
     <!-- <button type="button" @click="age++">Update Age</button> -->
-    <button type="button" @click="onClickAge">Update Age</button>
+    <button type="button" @click="onClickAge">Update Age Event</button>
+    <button type="button" @click="ageChangeFunction(3)">Update Age Callback</button>
     <p>{{ ageDoubled }}</p>
 
 </template>
@@ -15,7 +16,8 @@ export default {
         type: Number, // for multiple data type, use array [Number, String]
         // required: true,
         default: 20
-        }
+        }, 
+        ageChangeFunction: Function
     },
     emits: ['age-change'], 
     computed: {
