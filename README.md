@@ -128,3 +128,40 @@ Component A (Root) -> Component B
 Component A is the root or, __Parent__ component to Component B and Component C. Component B and Component C are known as __Siblings__ component to each other because they sit on the same level in the hierarchy. 
 
 However, there is no way for Sibling components to send data to each other. Therefore, in order to send data, it should be stored in the App (Root) component, and send data down using __props__. 
+
+## Props
+Think __props__ as of customized attributes for components. It can be used to customize the behavior of a component. 
+
+It is important to understand that the value that gets passed down as a prop will not be automaticaly interpreted as an expression. It needs to be binded if you want it to be an expression.
+
+Use __:__ to bind. 
+
+```
+  <user :age="age"></user>
+```
+
+When the data inside the parent component changes, all children components would reflect the change too. But it does not necessarily work in the reverse. 
+
+### The Limitations of Props
+- We are not allowed to __mutate__ props. 
+- Even if an update happens, we will not be able to hold onto the change. If there's an update in parent component, it will overwrite the change in the child component. 
+
+We might want to update in the child component and have it reflected in all components including siblings component. We can emit events to update props. 
+
+### Emitting Events
+Emit - To produce or trigger an event. 
+
+Only parent components can listen for events from children events. The method is not accessible to siblings component. 
+
+Only need this process if need to update a prop. 
+
+### Validating Props
+- Can be useful for debugging an application. 
+
+Can implement check on prop type (e.g. see if it is a number or string), require a prop to be passed down (using __required__), or have custom validator function. 
+
+```
+validator(value) {
+    return value < 130; 
+}
+```
