@@ -165,3 +165,14 @@ validator(value) {
     return value < 130; 
 }
 ```
+
+### Callback Functions
+- An alternative solution for updating the data in parent component from the child component. 
+
+
+#### Callback Functions vs Events
+- Personal preference, there's no significant performance difference from using either one. 
+
+According the Vue, it is recommended to use Events as most examples in the documentation uses events. Just to be consistent, probably better to use Events. 
+
+There's one advantage to use events - it will be logged, making it slightly easier for debugging. 
