@@ -10,7 +10,13 @@
 <script>
 export default {
     name: "User",
-    props: ["age"], // it should match the attribute name
+    props: // ["age"], // it should match the attribute name
+    {   age: {
+        type: Number, // for multiple data type, use array [Number, String]
+        // required: true,
+        default: 20
+        }
+    },
     emits: ['age-change'], 
     computed: {
         ageDoubled() {

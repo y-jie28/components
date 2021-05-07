@@ -154,3 +154,14 @@ Emit - To produce or trigger an event.
 Only parent components can listen for events from children events. The method is not accessible to siblings component. 
 
 Only need this process if need to update a prop. 
+
+### Validating Props
+- Can be useful for debugging an application. 
+
+Can implement check on prop type (e.g. see if it is a number or string), require a prop to be passed down (using __required__), or have custom validator function. 
+
+```
+validator(value) {
+    return value < 130; 
+}
+```
